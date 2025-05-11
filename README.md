@@ -19,53 +19,6 @@ Extendable Firmware Architecture: Can be adapted for OTA or CAN-based upgrades
 
 Safe and Isolated Code Zones: Enables reliable firmware update mechanisms in production
 
-📁 Project Structure
-
-├── BootLoader/              # Bootloader project files
-│   └── Core/Src
-│   └── Core/Inc
-│   └── BootLoader.ioc
-│   └── main.c, system_stm32...
-│
-├── Application/            # User application project files
-│   └── Core/Src
-│   └── Core/Inc
-│   └── Application.ioc
-│
-├── STM32G071RBTX_FLASH.ld  # Custom linker script
-
-🧠 Memory Map (STM32G071RBTx – 128KB Flash)
-
-Region
-
-Start Address
-
-End Address
-
-Size
-
-Purpose
-
-Bootloader
-
-0x08000000
-
-0x08003FFF
-
-16 KB
-
-Boot and Jump Logic
-
-Application
-
-0x08004000
-
-0x0801FFFF
-
-112 KB
-
-Main Application
-
 🧰 Tools Used
 
 Board: STM32 NUCLEO-G071RB
@@ -88,16 +41,6 @@ Application executes independently
 
 Optional: Shared functions or variables can be placed in a designated section (.shared_api) and accessed from both regions.
 
-📌 Highlights for Recruiters
-
-Demonstrates mastery over embedded firmware fundamentals: bootloader logic, memory control, and linker scripting
-
-Clean modular structure to isolate startup logic from application logic
-
-Project-ready for enhancements such as secure firmware upgrades over CAN or UART
-
-Reflects industry practices in embedded systems, automotive ECUs, and IoT firmware platforms
-
 📝 Future Improvements
 
 Add firmware update interface via CAN/UART
@@ -108,20 +51,8 @@ Support rollback and dual-application layout
 
 Add Makefile-based CLI builds for CI/CD integration
 
-📷 Suggested Diagrams
-
-Boot Sequence Flowchart
-
-Flash Memory Layout
-
-Application Jump Mechanism
-
-(Feel free to place these under a /docs/ folder or embed in the README once created.)
-
 🤝 License
 
 MIT License. Feel free to use, modify, and build upon this project.
-
-If you're a recruiter or engineer interested in this project, feel free to reach out via GitHub or LinkedIn!
 
 
